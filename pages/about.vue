@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { data: about } = await useAsyncData('about', () => queryCollection('about').first())
 
-const title = ref('About Debbie and her experience as a developer')
+const title = ref('About Senura Fernando')
 const description = ref(
   'Google Developer Expert, Microsoft Most Valueable Professional, GitHub Star, Cloudinary MDE, Nuxt Ambassador, Auth0 Ambassador',
 )
@@ -87,7 +87,7 @@ useHead({
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
               I'm
               <span class="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
-                Debbie O'Brien
+               Senura Fernando
               </span>
             </h1>
             <div class="w-24 h-1 bg-gradient-to-r from-primary to-blue-600 mx-auto mb-8 rounded-full" />

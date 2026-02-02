@@ -14,16 +14,15 @@ function toggle() {
           <div class="w-auto text-white">
             <NuxtLink to="/" class="hover:no-underline flex">
               <NuxtImg
-                provider="cloudinary"
                 class="rounded-full mr-4 profile-pic border-white border"
-                src="w_100,c_fill,ar_1:1,q_auto,fl_lossy,f_auto/v1589118478/debbie.codes/debbie-thumb_clt00n"
-                alt="Debbie O'Brien"
+                src="/images/profile.jpg"
+                alt="Senura Fernando"
                 width="100"
                 height="auto"
                 quality="80"
-                format="webp"
+                
               />
-              <span class="self-center text-white"> Debbie O'Brien </span>
+              <span class="self-center text-white"> Senura Fernando </span>
             </NuxtLink>
           </div>
           <div class="text-white hidden lg:block">

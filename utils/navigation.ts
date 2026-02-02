@@ -6,18 +6,6 @@ export const NavLinks: Navigation[] = [
     link: 'About',
   },
   {
-    url: '/videos',
-    link: 'Videos',
-  },
-  {
-    url: '/podcasts',
-    link: 'Podcasts',
-  },
-  {
-    url: '/courses',
-    link: 'Courses',
-  },
-  {
     url: '/blog',
     link: 'Blog',
   },
