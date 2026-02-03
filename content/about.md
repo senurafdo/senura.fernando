@@ -2,12 +2,12 @@
 title: About
 ---
 
-With over 15 years experience in Frontend development I have worked as a Tech Lead and consultant for many important clients with various technologies and often with a strong focus on performance. I have lead teams both in house and remotely as well as giving workshops and training. I have many years of experience as a mentor for online learning platforms, Treehouse and OpenClassrooms and am a teacher at [Vue School](https://vueschool.io/courses/internationalization-with-vue-i18n) as well as [Jamstack Explorers](https://explorers.netlify.com/learn/get-started-with-nuxt), and I am a writer for [Ultimate Courses](https://ultimatecourses.com/author/debbieobrien).
+With over a decade of experience in software quality engineering, I’ve worked across diverse products and teams to help deliver reliable, scalable, and user-focused software. My background spans both manual and automated testing, with a strong emphasis on building sustainable test strategies rather than treating QA as a final checkpoint.
 
-I am a Senior Staff Developer Relations Engineer, Applied AI at Block, Google Developer Expert in web technologies, Nuxt Ambassador, and am a former Microsoft Most Valuable Professional in developer technologies, Media Developer Expert and GitHub Star Alumni.
+I’ve worked as a Senior QA Engineer and QA Lead, collaborating closely with developers, product managers, and stakeholders in agile environments. My work often focuses on test automation, API testing, and end-to-end testing, with hands-on experience using tools like Playwright, modern JavaScript/TypeScript stacks, and CI/CD pipelines. I care deeply about test design, risk-based testing, and ensuring quality is built in from the earliest stages of development.
 
-I have a special love for JavaScript frameworks especially Vue.js and Nuxt.js and am now focused on testing especially end to end testing with Playwright. I have a Frontend and FullStack Tech Degree and am Microsoft certified. I am an international speaker, and have spoken at many meet-ups and conferences worldwide on many continents including Antarctica.
+Beyond hands-on testing, I’ve led QA initiatives, mentored junior and mid-level engineers, and helped teams improve their overall quality culture. I enjoy breaking down complex systems, asking the uncomfortable “what if” questions, and translating technical risks into clear, actionable insights for both technical and non-technical audiences.
 
-I am Irish but live in Mallorca, Spain and when I am not writing code and studying new technologies you can find me doing all sorts of sports from running, cycling and skiing, body combat and of course Taekwondo as I am a 4th degree black belt.
+I have experience testing cloud-based platforms, APIs, and data-driven systems, and I’m particularly interested in how QA evolves alongside AI-powered products, automation, and modern DevOps practices. I’m always learning whether that’s refining automation frameworks, improving observability in tests, or exploring better ways to validate complex system behavior.
 
-Checkout my [YouTube Channel](https://www.youtube.com/c/DebbieOBrien) for all the latest videos.
+When I’m not testing or automating, I enjoy sharing knowledge, reflecting on real-world QA challenges, and continuously improving how teams think about quality. This blog is where I document lessons learned, practical testing strategies, and thoughts on building resilient software in fast-moving environments.
