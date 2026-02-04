@@ -3,57 +3,36 @@ const { data: about } = await useAsyncData('about', () => queryCollection('about
 
 const title = ref('About Senura Fernando')
 const description = ref(
-  'Google Developer Expert, Microsoft Most Valueable Professional, GitHub Star, Cloudinary MDE, Nuxt Ambassador, Auth0 Ambassador',
+  'BEng (Hons) Software Engineering, Master in Business Administration (Merit)',
 )
 const awards = ref([
+  
   {
-    name: 'GitHub Star Alumni',
-    url: 'https://stars.github.com/alumni/',
+    name: 'BEng (Hons) Software Engineering',
+   // url: '',
     about:
-      'GitHub Stars are experts and technical leaders who passionately share their knowledge, online and in-person, with communities in which they live and work. At the time of publishing this there were only 36 stars worldwide.',
+      'I hold a BEng (Hons) in Software Engineering (2:1) from IIT Sri Lanka, affiliated with The University of Westminster, UK. The program grounded me in strong engineering principles, problem-solving, and real-world software development practices. It shaped the way I design, build, and think about scalable, reliable systems.',
   },
   {
-    name: 'Google Developer Expert',
-    url: 'https://developers.google.com/community/experts/directory/profile/profile-debbie_o_brien',
+    name: 'Master in Business Administration (Merit)',
+   // url: '',
     about:
-      'The Google Developers Experts program is a global network of highly experienced technology experts, influencers and thought leaders who actively support developers, companies and tech communities by speaking at events, publishing content. Nearly 700 Experts represent 18+ Google technologies around the world!',
+      'I completed my Master in Business Administration (Merit) at ANC Sri Lanka, affiliated with University of West London. The program strengthened my understanding of strategy, leadership, and data-driven decision-making. It complements my technical background by bridging business insight with execution.',
   },
   {
-    name: 'Former Microsoft Most Valuable Professional',
-    url: 'https://mvp.microsoft.com/en-us/PublicProfile/5003613?fullName=Debbie%20O%27Brien',
+    name: 'ISTQB CTFL certification -  82.50%.',
+   // url: '',
     about:
-      'The Microsoft Most Valuable Professional (MVP) award is given by Microsoft to technology experts who passionately share their knowledge with the community. They are awarded to people who actively share their technical expertise with the different technology communities related directly, or indirectly to Microsoft.',
+      'Earned the ISTQB CTFL certification from International Software Testing Qualifications Board (Certificate No. 24-CTFL 4-200-12) to strengthen core software testing fundamentals and validate QA expertise.',
   },
   {
-    name: 'Media Developer Expert',
-    url: 'https://cloudinary.com/mde',
-    about:
-      'Energizing a diverse community of developers to share insight, expertise, and best practices of using media technology in web and mobile apps.',
+    name: 'ISTQB CTFL-AT certification - 87.5%',
+    about: 'Earned the ISTQB CTFL-AT certification from International Software Testing Qualifications Board (Certificate No. 25-CTFL-AT-00201-USA) to deepen expertise in agile testing methodologies and adaptive QA strategies.'
   },
   {
-    name: 'Auth0 Ambassador',
-    url: 'https://auth0.com/ambassador-program/',
-    about:
-      'Part of a global team of ambassadors empowering communities and help make the Internet a safer place by attending and hosting meetups, conferences, and other events that focus on authentication, security, and identity topics.',
-  },
-  {
-    name: 'Microsoft Certified',
-    url: 'https://www.youracclaim.com/badges/2bb11106-cef6-4a1c-9618-1ba63b413377',
-    about:
-      'Passing Exam 480: Programming in HTML5 with JavaScript and CSS3 validates a candidate\'s ability to access and secure data as well as implement document structures, objects, and program flow.',
-  },
-  {
-    name: 'Bachelor\'s Level Diploma',
-    url: 'https://openclassrooms.com/en/paths/315-front-end-developer',
-    about:
-      'A 12 month program complete with one to one mentoring where you complete projects based on scenarios from the professional world, look for solutions, create your deliverables and present them convincingly in front of your mentor! ',
-  },
-  {
-    name: 'Full Stack JavaScript Tech Degree',
-    url: 'https://teamtreehouse.com/techdegree',
-    about:
-      'Techdegree is a bootcamp-tier program that guides you through a full curriculum of Treehouse courses. In addition, it includes a portfolio of curated projects, workshops, quizzes, and access to the exclusive Treehouse Slack community.',
-  },
+    name: 'International Services Director (Volunteer) - Rotaract Club',
+    about: 'Led a multinational online collaboration initiative via Twitter that connected over 20 clubs across 6 countries. The #WeTalk project gained recognition as one of the most successful international service projects in the network, fostering cross-cultural dialogue and cooperation.'
+  }
 ])
 
 useHead({
@@ -160,7 +139,7 @@ useHead({
                   </p>
 
                   <!-- Learn More Button -->
-                  <div class="mt-6 pt-4 border-t border-gray-200/50 dark:border-gray-700/50">
+                  <!-- <div class="mt-6 pt-4 border-t border-gray-200/50 dark:border-gray-700/50">
                     <a
                       :href="award.url"
                       target="_blank"
@@ -173,7 +152,7 @@ useHead({
                         <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                       </svg>
                     </a>
-                  </div>
+                  </div> -->
                 </div>
               </article>
             </div>
