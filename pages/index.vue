@@ -4,11 +4,13 @@ import { onMounted } from 'vue'
 const { data: articles } = await useAsyncData('articles-home', () =>
   queryCollection('blog').order('date', 'DESC').limit(6).all())
 
-const { data: videos } = await useAsyncData('videos-home', () =>
-  queryCollection('videos').order('date', 'DESC').limit(5).all())
-
-const { data: podcasts } = await useAsyncData('podcasts-home', () =>
-  queryCollection('podcasts').order('date', 'DESC').limit(2).all())
+// Temporarily disabled on home page.
+// Re-enable these when you have fresh video/podcast content.
+// const { data: videos } = await useAsyncData('videos-home', () =>
+//   queryCollection('videos').order('date', 'DESC').limit(5).all())
+//
+// const { data: podcasts } = await useAsyncData('podcasts-home', () =>
+//   queryCollection('podcasts').order('date', 'DESC').limit(2).all())
 
 onMounted(() => {
   const observer = new IntersectionObserver(
@@ -34,6 +36,14 @@ onMounted(() => {
     <div class="pt-4 pb-12 px-6 sm:px-8 lg:px-12 bg-white dark:bg-gray-800">
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-12">
+          <!--
+            Temporarily hidden:
+            - Recent Videos
+            - Featured Podcast
+            - Recent Podcasts
+            See HOME_CONTENT_README.md for re-enable steps.
+          -->
+          <!--
           <section
             aria-labelledby="recent-videos"
             class="animated-section lg:col-span-2"
@@ -67,6 +77,7 @@ onMounted(() => {
             </NuxtLink>
             <CardList v-if="podcasts" :list="podcasts" section="podcasts" :stacked="true" />
           </section>
+          -->
 
           <section
             aria-labelledby="recent-posts"

@@ -6,8 +6,9 @@ const twitterCard = 'https://debbie.codes/twitter-card.png'
 const mySite = 'https://debbie.codes'
 
 const { path } = useRoute()
-const canonical = computed(()=> {
-  if (path === '/') return mySite
+const canonical = computed(() => {
+  if (path === '/')
+    return mySite
   const { href: canonical } = new URL(path, mySite)
   return canonical
 })
@@ -20,7 +21,7 @@ useHead({
   title: ogTitle,
   titleTemplate: title =>
     title !== ogTitle
-      ? `${title} · Debbie Codes`
+      ? `${title} · Senura Fernando`
       : title,
   meta: [
     {
@@ -41,8 +42,7 @@ useHead({
     },
     {
       property: 'og:title',
-      content: ogTitle
-      ,
+      content: ogTitle,
     },
     {
       property: 'og:description',
@@ -91,11 +91,13 @@ useHead({
 </script>
 
 <template>
-  <div>
+  <div class="min-h-screen flex flex-col">
     <TheTopBar />
-    <div class="lg:container mx-auto mt-top-bar px-2 md:px-4">
-      <NuxtPage />
-    </div>
+    <main class="flex-1 w-full">
+      <div class="lg:container mx-auto mt-top-bar px-2 md:px-4">
+        <NuxtPage />
+      </div>
+    </main>
     <TheFooter />
   </div>
 </template>

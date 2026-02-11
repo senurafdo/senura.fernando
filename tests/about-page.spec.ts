@@ -7,23 +7,21 @@ test.describe('About Page', () => {
 
   test('About page - Displays hero section with greeting and title', async ({ page }) => {
     await test.step('Verify page title and URL', async () => {
-      await expect(page).toHaveTitle('About Debbie and her experience as a developer · Debbie Codes');
+      await expect(page).toHaveTitle("About Senura Fernando");
       await expect(page).toHaveURL('/about');
     });
 
     await test.step('Verify hero section content', async () => {
       await expect(page.getByText('👋 Hello There!')).toBeVisible();
-      await expect(page.getByRole('heading', { name: "I'm Debbie O'Brien", level: 1 })).toBeVisible();
+      await expect(page.getByRole('heading', { name: "I'm Senura Fernando", level: 1 })).toBeVisible();
     });
   });
 
   test('About page - Displays biographical content', async ({ page }) => {
     await test.step('Verify professional background paragraph', async () => {
-      const bioParagraph = page.getByText('With over 15 years experience in Frontend development');
+      const bioParagraph = page.getByText('With over a decade of experience in software quality engineering');
       await expect(bioParagraph).toBeVisible();
-      await expect(bioParagraph).toContainText('Tech Lead and consultant');
-      await expect(bioParagraph).toContainText('Vue School');
-      await expect(bioParagraph).toContainText('Jamstack Explorers');
+      await expect(bioParagraph).toContainText('Senior QA Engineer and QA Lead');
     });
 
     await test.step('Verify current role and achievements', async () => {

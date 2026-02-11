@@ -6,33 +6,33 @@ const description = ref(
   'BEng (Hons) Software Engineering, Master in Business Administration (Merit)',
 )
 const awards = ref([
-  
+
   {
     name: 'BEng (Hons) Software Engineering',
-   // url: '',
+    // url: '',
     about:
       'I hold a BEng (Hons) in Software Engineering (2:1) from IIT Sri Lanka, affiliated with The University of Westminster, UK. The program grounded me in strong engineering principles, problem-solving, and real-world software development practices. It shaped the way I design, build, and think about scalable, reliable systems.',
   },
   {
     name: 'Master in Business Administration (Merit)',
-   // url: '',
+    // url: '',
     about:
       'I completed my Master in Business Administration (Merit) at ANC Sri Lanka, affiliated with University of West London. The program strengthened my understanding of strategy, leadership, and data-driven decision-making. It complements my technical background by bridging business insight with execution.',
   },
   {
     name: 'ISTQB CTFL certification -  82.50%.',
-   // url: '',
+    // url: '',
     about:
       'Earned the ISTQB CTFL certification from International Software Testing Qualifications Board (Certificate No. 24-CTFL 4-200-12) to strengthen core software testing fundamentals and validate QA expertise.',
   },
   {
     name: 'ISTQB CTFL-AT certification - 87.5%',
-    about: 'Earned the ISTQB CTFL-AT certification from International Software Testing Qualifications Board (Certificate No. 25-CTFL-AT-00201-USA) to deepen expertise in agile testing methodologies and adaptive QA strategies.'
+    about: 'Earned the ISTQB CTFL-AT certification from International Software Testing Qualifications Board (Certificate No. 25-CTFL-AT-00201-USA) to deepen expertise in agile testing methodologies and adaptive QA strategies.',
   },
   {
     name: 'International Services Director (Volunteer) - Rotaract Club',
-    about: 'Led a multinational online collaboration initiative via Twitter that connected over 20 clubs across 6 countries. The #WeTalk project gained recognition as one of the most successful international service projects in the network, fostering cross-cultural dialogue and cooperation.'
-  }
+    about: 'Led a multinational online collaboration initiative via Twitter that connected over 20 clubs across 6 countries. The #WeTalk project gained recognition as one of the most successful international service projects in the network, fostering cross-cultural dialogue and cooperation.',
+  },
 ])
 
 useHead({
@@ -66,7 +66,7 @@ useHead({
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
               I'm
               <span class="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
-               Senura Fernando
+                Senura Fernando
               </span>
             </h1>
             <div class="w-24 h-1 bg-gradient-to-r from-primary to-blue-600 mx-auto mb-8 rounded-full" />

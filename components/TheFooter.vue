@@ -15,7 +15,7 @@
     <ul class="mt-8 flex flex-wrap justify-center space-x-6 mb-6 px-6">
       <li>
         <a
-          href="https://x.com/debs_obrien"
+          href="https://x.com/senura_"
           target="_blank"
           rel="noopener"
           aria-label="x"
@@ -31,7 +31,7 @@
 
       <li>
         <a
-          href="https://www.linkedin.com/in/debbie-o-brien-1a199975/"
+          href="https://www.linkedin.com/in/senura-fernando"
           target="_blank"
           rel="nofollow noopener noreferrer"
           aria-label="LinkedIn"
@@ -47,7 +47,7 @@
 
       <li>
         <a
-          href="https://www.youtube.com/c/DebbieOBrien"
+          href="https://www.youtube.com/@TestingMonkey"
           target="_blank"
           rel="nofollow noopener noreferrer"
           aria-label="YouTube"
@@ -62,23 +62,7 @@
       </li>
       <li>
         <a
-          href="https://www.twitch.tv/debs_obrien"
-          target="_blank"
-          rel="nofollow noopener noreferrer"
-          aria-label="Twitch"
-          class="
-            text-white
-            transition
-            hover:text-white
-          "
-        >
-          <IconTwitch class="h-10 w-10" />
-        </a>
-      </li>
-
-      <li>
-        <a
-          href="https://github.com/debs-obrien"
+          href="https://github.com/senurafdo"
           aria-label="GitHub"
           target="_blank"
           rel="nofollow noopener noreferrer"
@@ -91,25 +75,10 @@
           <IconGitHub class="h-10 w-10" />
         </a>
       </li>
-      <li>
-        <a
-          href="https://dev.to/debs_obrien"
-          aria-label="Devto"
-          target="_blank"
-          rel="nofollow noopener noreferrer"
-          class="
-            text-white
-            transition
-            hover:text-white
-          "
-        >
-          <IconDevto class="h-10 w-10" />
-        </a>
-      </li>
 
       <li>
         <a
-          href="https://www.buymeacoffee.com/debbieobrien"
+          href="https://buymeacoffee.com/senura"
           aria-label="buy me a coffee"
           target="_blank"
           rel="nofollow noopener noreferrer"
@@ -119,7 +88,7 @@
       </li>
     </ul>
     <p class="mt-8 text-center text-gray-400">
-      &copy; Debbie O'Brien, Palma de Mallorca, Spain
+      &copy; Senura Fernando, Germany
     </p>
   </footer>
 </template>

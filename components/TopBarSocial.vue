@@ -8,7 +8,7 @@ import IconYouTubeWhite from '~/components/icon/IconYouTubeWhite.vue'
   <ul class="flex gap-6 lg:gap-4 justify-center text-white mr-5 items-center">
     <li>
       <a
-        href="https://x.com/debs_obrien"
+        href="https://x.com/senura_"
         target="_blank"
         rel="noopener"
         aria-label="x"
@@ -17,7 +17,7 @@ import IconYouTubeWhite from '~/components/icon/IconYouTubeWhite.vue'
     </li>
     <li>
       <a
-        href="https://www.linkedin.com/in/debbie-o-brien-1a199975/"
+        href="https://www.linkedin.com/in/senura-fernando/"
         target="_blank"
         rel="nofollow noopener noreferrer"
         aria-label="linkedIn"
@@ -25,7 +25,7 @@ import IconYouTubeWhite from '~/components/icon/IconYouTubeWhite.vue'
     </li>
     <li>
       <a
-        href="https://github.com/debs-obrien"
+        href="https://github.com/senurafdo"
         aria-label="github"
         target="_blank"
         rel="nofollow noopener noreferrer"
@@ -33,7 +33,7 @@ import IconYouTubeWhite from '~/components/icon/IconYouTubeWhite.vue'
     </li>
     <li>
       <a
-        href="https://www.youtube.com/c/DebbieOBrien"
+        href="https://www.youtube.com/@TestingMonkey"
         target="_blank"
         rel="nofollow noopener noreferrer"
         aria-label="youtube"

@@ -5,7 +5,7 @@ const heroType = ref(0)
 const canvasRef = ref(null)
 const asciiRef = ref(null)
 const typedText = ref('')
-const fullText = 'Senior Staff Developer Relations Engineer, Applied AI @Block'
+const fullText = 'Senior Quality Engineer'
 let animationFrameId
 let resizeListener
 let mouseMoveListener
@@ -174,7 +174,7 @@ const heroDesigns = {
     animate()
   },
   7: () => { // ASCII Art Reveal
-    const targetText = `DEBBIE O'BRIEN`
+    const targetText = `SENURA FERNANDO`
     const chars = '!<>-_\\/[]{}—=+*^?#________'
     const el = asciiRef.value
     let frame = 0
@@ -239,7 +239,7 @@ onBeforeUnmount(() => {
       <!-- Design 1: Glitching Text -->
       <div v-if="heroType === 1" class="glitch-wrapper" aria-hidden="true">
         <h1 class="glitch-text text-5xl md:text-7xl" data-text="Debbie O'Brien">
-          Debbie O'Brien
+          Senura Fernando
         </h1>
       </div>
 
@@ -248,16 +248,17 @@ onBeforeUnmount(() => {
 
       <!-- Default Heading -->
       <h1 v-else class="text-5xl md:text-7xl font-bold text-white uppercase tracking-wider">
-        Debbie <span class="text-primary">O'Brien</span>
+        Senura <span class="text-primary">Fernando</span>
       </h1>
 
       <!-- Subtitle (Now visible on ASCII design) -->
       <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-2xl">
         <span v-if="heroType === 3" class="typing-text">{{ typedText }}</span>
-        <span v-else>Senior Staff Developer Relations Engineer, Applied AI @Block</span>
+        <span v-else>Senior Quality Engineer</span>
       </p>
 
-      <!-- Credentials/Badges -->
+      <!-- Credentials/Badges temporarily disabled -->
+      <!--
       <div class="mt-8 flex flex-wrap justify-center items-center gap-3 sm:gap-4">
         <a
           href="https://developers.google.com/community/experts/directory/profile/profile-debbie-o-brien"
@@ -307,6 +308,7 @@ onBeforeUnmount(() => {
           <span class="text-sm font-medium text-gray-300 group-hover:text-white transition-colors">Nuxt Ambassador</span>
         </a>
       </div>
+      -->
     </div>
   </div>
 </template>
