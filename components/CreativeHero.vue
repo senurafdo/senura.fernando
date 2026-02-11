@@ -238,7 +238,7 @@ onBeforeUnmount(() => {
     <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
       <!-- Design 1: Glitching Text -->
       <div v-if="heroType === 1" class="glitch-wrapper" aria-hidden="true">
-        <h1 class="glitch-text text-5xl md:text-7xl" data-text="Debbie O'Brien">
+        <h1 class="glitch-text text-5xl md:text-7xl" data-text="Senura Fernando">
           Senura Fernando
         </h1>
       </div>
