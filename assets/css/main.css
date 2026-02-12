@@ -1,10 +1,10 @@
 :root {
-  --color: #243746;
-  --color-primary: #d8002d;
-  --color-secondary: #0e2233;
-  --bg: #f3f5f4;
-  --bg-secondary: #fff;
-  --border-color: #ddd;
+  --color: #09637E;
+  --color-primary: #088395;
+  --color-secondary: #7AB2B2;
+  --bg: #EBF4F6;
+  --bg-secondary: #ffffff;
+  --border-color: #7AB2B2;
 }
 
 .dark {
@@ -27,11 +27,19 @@ body {
   color: var(--color);
   font-size: 18px;
   line-height: 1.6;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.2px;
   word-wrap: break-word;
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
+  font-family: "Manrope", "Segoe UI", sans-serif;
   @apply font-sans;
+}
+
+#__nuxt {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(9, 99, 126, 0.10), transparent 28%),
+    radial-gradient(circle at 100% 20%, rgba(122, 178, 178, 0.15), transparent 26%),
+    #EBF4F6;
 }
 
 .dark .prose,

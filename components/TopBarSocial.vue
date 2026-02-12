@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import IconLinkedInWhite from '~/components/icon/IconLinkedInWhite.vue'
-import IconXWhite from '~/components/icon/IconXWhite.vue'
-import IconYouTubeWhite from '~/components/icon/IconYouTubeWhite.vue'
+import IconLinkedIn from '~/components/icon/IconLinkedIn.vue'
+import IconX from '~/components/icon/IconX.vue'
+import IconYouTube from '~/components/icon/IconYouTube.vue'
 </script>
 
 <template>
-  <ul class="flex gap-6 lg:gap-4 justify-center text-white mr-5 items-center">
+  <ul class="flex gap-6 lg:gap-3 justify-center text-[#EBF4F6] mr-2 items-center">
     <li>
       <a
         href="https://x.com/senura_"
         target="_blank"
         rel="noopener"
         aria-label="x"
-        class="text-white transition duration-300 ease-in-out transform custom-hover"
-      ><IconXWhite class=" w-8 h-8 lg:h-4 lg:w-4" /></a>
+        class="text-[#EBF4F6] hover:text-[#7AB2B2] transition duration-300"
+      ><IconX class="w-7 h-7 lg:h-4 lg:w-4" /></a>
     </li>
     <li>
       <a
@@ -21,7 +21,8 @@ import IconYouTubeWhite from '~/components/icon/IconYouTubeWhite.vue'
         target="_blank"
         rel="nofollow noopener noreferrer"
         aria-label="linkedIn"
-      ><IconLinkedInWhite class=" w-8 h-8 lg:h-4 lg:w-4" /></a>
+        class="text-[#EBF4F6] hover:text-[#7AB2B2] transition duration-300"
+      ><IconLinkedIn class="w-7 h-7 lg:h-4 lg:w-4" /></a>
     </li>
     <li>
       <a
@@ -29,7 +30,8 @@ import IconYouTubeWhite from '~/components/icon/IconYouTubeWhite.vue'
         aria-label="github"
         target="_blank"
         rel="nofollow noopener noreferrer"
-      ><IconGitHub class="w-8 h-8 lg:h-4 lg:w-4" /></a>
+        class="text-[#EBF4F6] hover:text-[#7AB2B2] transition duration-300"
+      ><IconGitHub class="w-7 h-7 lg:h-4 lg:w-4" /></a>
     </li>
     <li>
       <a
@@ -37,7 +39,8 @@ import IconYouTubeWhite from '~/components/icon/IconYouTubeWhite.vue'
         target="_blank"
         rel="nofollow noopener noreferrer"
         aria-label="youtube"
-      ><IconYouTubeWhite class="w-8 h-8 lg:h-5 lg:w-5" /></a>
+        class="text-[#EBF4F6] hover:text-[#7AB2B2] transition duration-300"
+      ><IconYouTube class="w-7 h-7 lg:h-5 lg:w-5" /></a>
     </li>
     <li><ColorMode /></li>
   </ul>

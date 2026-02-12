@@ -27,11 +27,11 @@ export default <Partial<Config>>{
         },
       },
       colors: {
-        primary: '#d8002d',
+        primary: '#088395',
         secondary: '#333',
         dark: '#091a28',
         elevated: '#dfe8ef',
-        linkExactActiveClass: '#fd213b',
+        linkExactActiveClass: '#088395',
       },
       margin: {
         'top-bar': '100px',

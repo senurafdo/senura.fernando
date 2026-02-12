@@ -28,7 +28,7 @@ function cycleColorMode() {
     <svg
       v-if="$colorMode.value === 'dark'"
       xmlns="http://www.w3.org/2000/svg"
-      class="w-8 h-8 lg:h-5 lg:w-5 text-gray-50"
+      class="w-8 h-8 lg:h-5 lg:w-5 text-[#EBF4F6] hover:text-[#7AB2B2] transition-colors"
       viewBox="0 0 20 20"
       fill="currentColor"
     >
@@ -39,9 +39,9 @@ function cycleColorMode() {
     <svg
       v-else
       xmlns="http://www.w3.org/2000/svg"
-      class="w-8 h-8 lg:h-5 lg:w-5"
+      class="w-8 h-8 lg:h-5 lg:w-5 text-[#EBF4F6] hover:text-[#7AB2B2] transition-colors"
       viewBox="0 0 20 20"
-      fill="white"
+      fill="currentColor"
     >
       <path
         fill-rule="evenodd"

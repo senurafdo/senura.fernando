@@ -18,7 +18,7 @@ function handleClick() {
         :key="index"
         class="pb-8 lg:pb-0 pr-6 text-2xl lg:text-lg"
       >
-        <nuxt-link :to="nav.url" class="hover:no-underline" @click="handleClick">
+        <nuxt-link :to="nav.url" class="hover:no-underline text-[#EBF4F6] hover:text-[#7AB2B2] transition-colors" @click="handleClick">
           {{ nav.link }}
         </nuxt-link>
       </li>

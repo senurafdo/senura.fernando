@@ -33,7 +33,7 @@ onMounted(() => {
 <template>
   <div>
     <CreativeHero />
-    <div class="pt-4 pb-12 px-6 sm:px-8 lg:px-12 bg-white dark:bg-gray-800">
+    <div class="pt-4 pb-12 px-6 sm:px-8 lg:px-12 bg-transparent">
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-12">
           <!--
