@@ -11,11 +11,11 @@ defineProps<{
     <article
       v-for="item of list"
       :key="item.path"
-      class="group"
+      class="group p-6 bg-white dark:bg-slate-800 rounded-xl transition-all duration-300 hover:bg-gray-50 dark:hover:bg-slate-700/50"
     >
       <NuxtLink
         :to="item.path"
-        class="block p-6 bg-white dark:bg-slate-800 rounded-xl transition-all duration-300 group-hover:bg-gray-50 dark:group-hover:bg-slate-700/50"
+        class="block"
       >
         <div>
           <h3 class="inline-flex items-center gap-3 text-xl font-bold text-gray-800 dark:text-white mb-2 leading-tight">
@@ -33,14 +33,14 @@ defineProps<{
           <p class="text-gray-600 dark:text-gray-400 mb-3 text-sm">
             {{ item.description }}
           </p>
-          <div class="flex items-center justify-between">
-            <div class="flex items-center text-xs text-gray-500 dark:text-gray-400">
-              <Date :date="item.date" />
-            </div>
-            <TagsList :tags="item.tags" section="blog" />
-          </div>
         </div>
       </NuxtLink>
+      <div class="mt-3 flex items-center justify-between">
+        <div class="flex items-center text-xs text-gray-500 dark:text-gray-400">
+          <Date :date="item.date" />
+        </div>
+        <TagsList :tags="item.tags" section="blog" />
+      </div>
     </article>
   </div>
 </template>

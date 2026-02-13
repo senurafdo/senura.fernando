@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onBeforeUnmount, onMounted } from 'vue'
 
 const { data: articles } = await useAsyncData('articles-home', () =>
   queryCollection('blog').order('date', 'DESC').limit(6).all())
@@ -12,21 +12,36 @@ const { data: articles } = await useAsyncData('articles-home', () =>
 // const { data: podcasts } = await useAsyncData('podcasts-home', () =>
 //   queryCollection('podcasts').order('date', 'DESC').limit(2).all())
 
+let observer: IntersectionObserver | null = null
+
 onMounted(() => {
-  const observer = new IntersectionObserver(
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  const sections = document.querySelectorAll<HTMLElement>('.animated-section')
+
+  if (prefersReducedMotion) {
+    sections.forEach(section => section.classList.add('fade-in'))
+    return
+  }
+
+  observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('fade-in')
+          observer?.unobserve(entry.target)
         }
       })
     },
     { threshold: 0.1 },
   )
 
-  document.querySelectorAll('.animated-section').forEach((section) => {
-    observer.observe(section)
+  sections.forEach((section) => {
+    observer?.observe(section)
   })
+})
+
+onBeforeUnmount(() => {
+  observer?.disconnect()
 })
 </script>
 
@@ -99,12 +114,26 @@ onMounted(() => {
 <style scoped>
 .animated-section {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translateY(26px) scale(0.985);
+  filter: blur(6px);
+  transition:
+    opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.75s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .animated-section.fade-in {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animated-section {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
 }
 </style>
