@@ -1,5 +1,5 @@
 ---
-title: Ant-man and the Wasp - w/ Debbie O'Brien
+title: Ant-man and the Wasp - w/ Senura Fernando
 date: 2021-10-06
 description: We talk about starting out in the frontend, how to keep learning and growing, even while switching from one paradigm to another to another.  We also talk a fair amount about the concepts behind Bit, getting an understanding of what problems it tries to solve and why.
 url: https://frontendheroes.transistor.fm/episodes/ant-man-and-the-wasp-w-debbie-obrien

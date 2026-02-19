@@ -70,7 +70,7 @@ test.describe('Mobile Navigation', () => {
       // Use force click to bypass any overlaying elements from CreativeHero animations
       await page.getByRole('banner').getByRole('navigation').getByRole('link', { name: 'Blog' }).click({ force: true });
       await expect(page).toHaveURL(/.*\/blog/);
-      await expect(page).toHaveTitle(/.*Blog.*Debbie Codes/);
+      await expect(page).toHaveTitle(/.*Blog.*Senura Fernando/);
     });
   });
 

@@ -46,7 +46,7 @@ useHead({
   link: [
     {
       rel: 'canonical',
-      href: 'https://debbie.codes/about',
+      href: 'https://senurafernando.com/about',
     },
   ],
 })

@@ -58,7 +58,7 @@ test.describe('Navigation Functionality', { tag: '@agent' }, () => {
             - link "buy me a coffee":
               - /url: https://www.buymeacoffee.com/debbieobrien
               - img
-        - paragraph: © Debbie O'Brien, Palma de Mallorca, Spain
+        - paragraph: © Senura Fernando, Palma de Mallorca, Spain
     `);
 
     // Verify copyright text is displayed

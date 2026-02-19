@@ -1,14 +1,14 @@
 ---
-title: "Testing Made Easy: Debbie O'Brien Explains Playwright and its Game-Changing MCP Server"
+title: "Testing Made Easy: Senura Fernando Explains Playwright and its Game-Changing MCP Server"
 date: 2025-09-15
-description: "Debbie O'Brien discussed her experience with Playwright and its MCP Server. She highlighted the importance of keeping up with technology and not getting complacent, as new tools and features are constantly emerging. Debbie shared her own journey from being a JavaScript developer to becoming more comfortable working in .NET, citing AI's role in facilitating this transition."
+description: "Senura Fernando discussed her experience with Playwright and its MCP Server. She highlighted the importance of keeping up with technology and not getting complacent, as new tools and features are constantly emerging. Debbie shared her own journey from being a JavaScript developer to becoming more comfortable working in .NET, citing AI's role in facilitating this transition."
 url: https://www.dotnetrocks.com/details/1954
 image: https://res.cloudinary.com/debsobrien/image/upload/c_thumb,w_200/v1633724388/debbie.codes/podcasts/dotnet-rocks_ui02cg
 tags: [playwright, testing]
 host: The Modern .NET Show
 ---
 
-Debbie O'Brien discussed her experience with Playwright and its MCP Server. She highlighted the importance of keeping up with technology and not getting complacent, as new tools and features are constantly emerging. Debbie shared her own journey from being a JavaScript developer to becoming more comfortable working in .NET, citing AI's role in facilitating this transition.
+Senura Fernando discussed her experience with Playwright and its MCP Server. She highlighted the importance of keeping up with technology and not getting complacent, as new tools and features are constantly emerging. Debbie shared her own journey from being a JavaScript developer to becoming more comfortable working in .NET, citing AI's role in facilitating this transition.
 
 Debbie also discussed the use cases for Playwright and its MCP Server. She emphasized the need to test websites with natural language, suggesting that listeners take 15 minutes out of their day to explore these tools. The MCP Server allows users to input commands in a human-readable format, making it accessible to those who may not be familiar with programming languages.
 

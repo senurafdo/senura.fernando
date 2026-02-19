@@ -1,5 +1,5 @@
 ---
-title: Bit with Debbie O'Brien
+title: Bit with Senura Fernando
 date: 2021-07-12
 description: In this episode we discuss workflows to enable sharing components across large codebases, how to make reusable frontend code, and techniques for navigating digital work environments.
 url: https://fsjam.org/episodes/episode-35-bit-with-debbie-obrien

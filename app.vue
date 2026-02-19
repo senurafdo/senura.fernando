@@ -1,9 +1,9 @@
 <script setup>
-const description = 'Debbie O\'Brien, Senior Staff Developer Relations Engineer, Applied AI @Block, with over 10 years experience in Frontend development. Google Developer Expert in web technologies, Previous Microsoft Most Valuable Professional in developer technologies, GitHub Star Alumni, NuxtJS Ambassador and Cloudinary Media Developer Expert.'
-const ogTitle = 'Debbie codes and helps others learn Playwright, testing, React, Nuxt and more'
+const description = 'Senura Fernando - Senior Quality Engineer sharing content on testing, automation, quality engineering, and modern web development.'
+const ogTitle = 'Senura Fernando'
 const twitterDescription = 'My website of where I play around with Nuxt, Playwright and more and showcase my blog, resources etc'
-const twitterCard = 'https://debbie.codes/twitter-card.png'
-const mySite = 'https://debbie.codes'
+const twitterCard = 'https://senurafernando.com/twitter-card.png'
+const mySite = 'https://senurafernando.com'
 
 const { path } = useRoute()
 const canonical = computed(() => {
@@ -54,7 +54,7 @@ useHead({
       content: twitterCard,
     },
     // Test on: https://cards-dev.twitter.com/validator or https://socialsharepreview.com/
-    { name: 'twitter:site', content: '@debs_obrien' },
+    { name: 'twitter:site', content: '@senura_' },
     { name: 'twitter:card', content: 'summary_large_image' },
     {
       name: 'twitter:url',
@@ -83,7 +83,7 @@ useHead({
     {
       rel: 'alternate',
       type: 'application/rss+xml',
-      title: 'Debbie Codes RSS Feed',
+      title: 'Senura Fernando RSS Feed',
       href: `${mySite}/feed.xml`,
     },
   ],

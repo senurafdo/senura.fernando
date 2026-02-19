@@ -1,7 +1,7 @@
 # Senura Fernando
 
 
-This project started as a clone of Debbie O'Brien’s personal website. Credit for the original design and implementation goes to Debbie O'Brien. The codebase has since been modified and customized.
+This project started as a clone of Senura Fernando’s personal website. Credit for the original design and implementation goes to Senura Fernando. The codebase has since been modified and customized.
 
 
 This is my website which I built in Nuxt 3. I use it as my playground for trying out new stuff and having fun. Feel free to have a look around and copy whatever you like as the code is open source so if it helps you then great. All content is written in markdown using Nuxt Content v2 and makes it very easy to add new posts, videos etc. Site is a static site meaning it can be hosted for free on any hosting service such as Netlify.

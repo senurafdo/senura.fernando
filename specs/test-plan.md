@@ -2,7 +2,7 @@
 
 ## Application Overview
 
-**Debbie.Codes** is a Nuxt 3-based personal portfolio and content website for Debbie O'Brien, a Senior Staff Developer Relations Engineer, Applied AI @Block. The site serves as a central hub for her professional content, including blog posts, videos, podcasts, courses, and biographical information.
+**Debbie.Codes** is a Nuxt 3-based personal portfolio and content website for Senura Fernando, a Senior Staff Developer Relations Engineer, Applied AI @Block. The site serves as a central hub for her professional content, including blog posts, videos, podcasts, courses, and biographical information.
 
 ### Key Features
 - **Content Management**: Markdown-driven content using Nuxt Content v2
@@ -30,9 +30,9 @@
 3. Locate the subtitle describing Debbie's role
 
 **Expected Results:**
-- Heading "Debbie O'Brien" is displayed with level 1
+- Heading "Senura Fernando" is displayed with level 1
 - Subtitle "Senior Staff Developer Relations Engineer, Applied AI @Block" is visible
-- Page title includes "Debbie codes and helps others learn Playwright, testing, React, Nuxt and more"
+- Page title includes "Senura Fernando and helps others learn Playwright, testing, React, Nuxt and more"
 
 #### 1.2 Verify Award Badges Display
 **Steps:**
@@ -179,7 +179,7 @@
   - Courses
   - Blog
 - All footer links are functional
-- Copyright text "© Debbie O'Brien, Palma de Mallorca, Spain" is displayed
+- Copyright text "© Senura Fernando, Palma de Mallorca, Spain" is displayed
 
 ---
 
@@ -194,8 +194,8 @@
 3. Read the biography sections
 
 **Expected Results:**
-- Page title is "About Debbie and her experience as a developer · Debbie Codes"
-- Main heading "I'm Debbie O'Brien" (level 1) is displayed
+- Page title is "About Debbie and her experience as a developer · Senura Fernando"
+- Main heading "I'm Senura Fernando" (level 1) is displayed
 - Biography paragraphs are present describing:
   - 15+ years of frontend experience
   - Teaching experience at Vue School, Jamstack Explorers, Ultimate Courses
@@ -240,7 +240,7 @@
 2. Verify page structure
 
 **Expected Results:**
-- Page title is "Blog · Debbie Codes"
+- Page title is "Blog · Senura Fernando"
 - Main heading "Blog" (level 1) is displayed
 - Subtitle "Thoughts on web development, testing, performance, and developer experience" is visible
 - Topics list is displayed
@@ -404,7 +404,7 @@
 2. Verify post structure
 
 **Expected Results:**
-- Page title includes post title + " · Debbie Codes"
+- Page title includes post title + " · Senura Fernando"
 - Article element contains:
   - Post heading (level 1)
   - Publication date (time element)
@@ -471,7 +471,7 @@
 2. Verify page structure
 
 **Expected Results:**
-- Page title is "Videos · Debbie Codes"
+- Page title is "Videos · Senura Fernando"
 - Main heading "Videos" (level 1) is displayed
 - Subtitle "Videos from conference talks, interviews and live streams" is visible
 - Topics filter list is present
@@ -568,7 +568,7 @@
 2. Verify page structure
 
 **Expected Results:**
-- Page title is "Podcast Interviews · Debbie Codes"
+- Page title is "Podcast Interviews · Senura Fernando"
 - Main heading "Podcast Interviews" (level 1) is displayed
 - Subtitle "Discover conversations about web development, testing, and developer advocacy" is visible
 - Podcast statistics section is displayed showing:
@@ -590,7 +590,7 @@
 - Featured Podcast article is displayed prominently
 - Contains:
   - "Featured Podcast" heading (level 3)
-  - Podcast title: "Changing Testing using Playwright MCP with Debbie O'Brien"
+  - Podcast title: "Changing Testing using Playwright MCP with Senura Fernando"
   - "Listen Now" link with external URL (dotnetrocks.com)
   - Podcast image/cover
 
@@ -663,7 +663,7 @@
 2. Verify page structure
 
 **Expected Results:**
-- Page title is "Courses · Debbie Codes"
+- Page title is "Courses · Senura Fernando"
 - Main heading "Courses" (level 1) is displayed
 - Subtitle "Collection of courses I have created" is visible
 - Topics filter list is present

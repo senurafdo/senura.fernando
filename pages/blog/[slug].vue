@@ -26,11 +26,11 @@ useHead({
   meta: [
     { name: 'description', content: description },
     // Test on: https://developers.facebook.com/tools/debug/ or https://socialsharepreview.com/
-    { property: 'og:site_name', content: 'Debbie Codes' },
+    { property: 'og:site_name', content: 'Senura Fernando' },
     { property: 'og:type', content: 'website' },
     {
       property: 'og:url',
-      content: 'https://debbie.codes',
+      content: 'https://senurafernando.com',
     },
     {
       property: 'og:title',
@@ -45,11 +45,11 @@ useHead({
       content: ogImage || image,
     },
     // Test on: https://cards-dev.twitter.com/validator or https://socialsharepreview.com/
-    { name: 'twitter:site', content: '@debs_obrien' },
+    { name: 'twitter:site', content: '@senura_' },
     { name: 'twitter:card', content: 'summary_large_image' },
     {
       name: 'twitter:url',
-      content: `https://debbie.codes/blog/${slug}`,
+      content: `https://senurafernando.com/blog/${slug}`,
     },
     {
       name: 'twitter:title',
@@ -67,7 +67,7 @@ useHead({
   link: [
     {
       rel: 'canonical',
-      href: article.value?.canonical || `https://debbie.codes${path}`,
+      href: article.value?.canonical || `https://senurafernando.com${path}`,
     },
   ],
 })

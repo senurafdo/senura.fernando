@@ -2,22 +2,22 @@ import { Feed } from 'feed'
 import { queryCollection } from '@nuxt/content/server'
 
 export default defineEventHandler(async (event) => {
-  const siteUrl = 'https://debbie.codes'
+  const siteUrl = 'https://senurafernando.com'
   const author = {
-    name: 'Debbie O\'Brien',
-    email: 'debbie@debbie.codes',
+    name: 'Senura Fernando',
+    email: 'hello@senurafernando.com',
     link: siteUrl,
   }
 
   const feed = new Feed({
-    title: 'Debbie Codes',
-    description: 'Debbie O\'Brien - Senior Staff Developer Relations Engineer, Applied AI @Block, with over 10 years experience in Frontend development. Writing about Playwright, testing, React, Nuxt and more.',
+    title: 'Senura Fernando',
+    description: 'Senura Fernando - Senior Quality Engineer writing about testing, quality engineering, automation, and modern web development.',
     id: siteUrl,
     link: siteUrl,
     language: 'en',
     image: `${siteUrl}/twitter-card.png`,
     favicon: `${siteUrl}/favicon.ico`,
-    copyright: `All rights reserved ${new Date().getFullYear()}, Debbie O'Brien`,
+    copyright: `All rights reserved ${new Date().getFullYear()}, Senura Fernando`,
     feedLinks: {
       rss2: `${siteUrl}/feed.xml`,
     },

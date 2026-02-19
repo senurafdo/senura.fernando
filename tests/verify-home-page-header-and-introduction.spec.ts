@@ -15,6 +15,6 @@ test.describe('Home Page Content Display', { tag: '@agent' }, () => {
     await expect(page.getByText('Senior Staff Developer Relations Engineer, Applied AI @Block')).toBeVisible();
 
     // Verify page title includes expected text
-    await expect(page).toHaveTitle(/Debbie codes and helps others learn Playwright, testing, React, Nuxt and more/);
+    await expect(page).toHaveTitle(/Senura Fernando and helps others learn Playwright, testing, React, Nuxt and more/);
   });
 });

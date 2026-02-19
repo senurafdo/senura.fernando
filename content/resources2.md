@@ -20,8 +20,8 @@ List of all my courses, podcasts, opensource projects and blog posts
 
 ### Tim Benniks
 
-- [An interview with Debbie O'Brien](https://www.youtube.com/watch?v=aw4nl6hGjb0&feature=youtu.be)
-- [Vue.js Global Conference: Interview with Debbie O'Brien](https://www.youtube.com/watch?v=IBKgryFpUDs)
+- [An interview with Senura Fernando](https://www.youtube.com/watch?v=aw4nl6hGjb0&feature=youtu.be)
+- [Vue.js Global Conference: Interview with Senura Fernando](https://www.youtube.com/watch?v=IBKgryFpUDs)
 
 ### GraphQL Fireside Chat
 
@@ -94,7 +94,7 @@ List of all my courses, podcasts, opensource projects and blog posts
 
 ### Blog Posts that include me
 
-- [CityJSConf talks to Debbie O'Brien](https://medium.com/cityjsconf/cityjsconf-talks-to-debbie-obrien-3a3a2cb9a5cd)
+- [CityJSConf talks to Senura Fernando](https://medium.com/cityjsconf/cityjsconf-talks-to-debbie-obrien-3a3a2cb9a5cd)
 - [Meet Debbie: It took her only 8 months to become a Frontend Architect](https://blog.openclassrooms.com/en/2017/12/27/success-story-8-months-front-end-architect-bluekiri/)
 - [JavaScript workshop with Kyle Simpson](https://tech.trivago.com/2018/10/15/javascript-workshop-with-kyle-simpson/)
 
