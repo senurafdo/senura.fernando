@@ -5,63 +5,23 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Navigation Functionality', { tag: '@agent' }, () => {
   test('Verify Footer Navigation', async ({ page }) => {
-    // 1. Navigate to any page
     await page.goto('/');
 
-    // 2. Scroll to the footer
     await expect(page.getByRole('contentinfo', { name: '' })).toBeVisible();
 
-    // 3. Verify footer navigation links
-    await expect(page.getByRole('contentinfo')).toMatchAriaSnapshot(`
-      - contentinfo:
-        - list:
-          - listitem:
-            - link "About":
-              - /url: /about
-          - listitem:
-            - link "Videos":
-              - /url: /videos
-          - listitem:
-            - link "Podcasts":
-              - /url: /podcasts
-          - listitem:
-            - link "Courses":
-              - /url: /courses
-          - listitem:
-            - link "Blog":
-              - /url: /blog
-        - list:
-          - listitem:
-            - link "x":
-              - /url: https://x.com/debs_obrien
-              - img
-          - listitem:
-            - link "LinkedIn":
-              - /url: https://www.linkedin.com/in/debbie-o-brien-1a199975/
-              - img
-          - listitem:
-            - link "YouTube":
-              - /url: https://www.youtube.com/c/DebbieOBrien
-              - img
-          - listitem:
-            - link "Twitch":
-              - /url: https://www.twitch.tv/debs_obrien
-              - img
-          - listitem:
-            - link "GitHub":
-              - /url: https://github.com/debs-obrien
-          - listitem:
-            - link "Devto":
-              - /url: https://dev.to/debs_obrien
-              - img
-          - listitem:
-            - link "buy me a coffee":
-              - /url: https://www.buymeacoffee.com/debbieobrien
-              - img
-        - paragraph: © Senura Fernando, Palma de Mallorca, Spain
-    `);
+    const footer = page.getByRole('contentinfo');
+    const footerNav = footer.getByRole('list').first();
+    await expect(footerNav.getByRole('link', { name: 'About' })).toHaveAttribute('href', '/about');
+    await expect(footerNav.getByRole('link', { name: 'Blog' })).toHaveAttribute('href', '/blog');
+    await expect(footerNav.getByRole('link')).toHaveCount(2);
 
-    // Verify copyright text is displayed
-    await expect(page.getByText('© Debbie O\'Brien, Palma de Mallorca, Spain')).toBeVisible();
+    const socialLinks = footer.getByRole('list').nth(1);
+    await expect(socialLinks.getByRole('link', { name: 'x' })).toHaveAttribute('href', 'https://x.com/senura_');
+    await expect(socialLinks.getByRole('link', { name: 'LinkedIn' })).toHaveAttribute('href', 'https://www.linkedin.com/in/senura-fernando');
+    await expect(socialLinks.getByRole('link', { name: 'YouTube' })).toHaveAttribute('href', 'https://www.youtube.com/@TestingMonkey');
+    await expect(socialLinks.getByRole('link', { name: 'GitHub' })).toHaveAttribute('href', 'https://github.com/senurafdo');
+    await expect(socialLinks.getByRole('link', { name: 'buy me a coffee' })).toHaveAttribute('href', 'https://buymeacoffee.com/senura');
+
+    await expect(page.getByText('© Senura Fernando, Germany')).toBeVisible();
   });
 });

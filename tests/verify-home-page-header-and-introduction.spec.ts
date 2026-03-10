@@ -5,16 +5,12 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Home Page Content Display', { tag: '@agent' }, () => {
   test('Verify Home Page Header and Introduction', async ({ page }) => {
-    // 1. Navigate to the home page (`/`)
     await page.goto('/');
 
-    // 2. Locate the main heading
-    await expect(page.getByRole('heading', { name: 'Debbie O\'Brien', level: 1 })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Senura Fernando', level: 1 })).toBeVisible();
 
-    // 3. Locate the subtitle describing Debbie's role
-    await expect(page.getByText('Senior Staff Developer Relations Engineer, Applied AI @Block')).toBeVisible();
+    await expect(page.getByText('Senior Quality Engineer')).toBeVisible();
 
-    // Verify page title includes expected text
-    await expect(page).toHaveTitle(/Senura Fernando and helps others learn Playwright, testing, React, Nuxt and more/);
+    await expect(page).toHaveTitle('Senura Fernando');
   });
 });

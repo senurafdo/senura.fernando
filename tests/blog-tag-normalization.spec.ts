@@ -5,48 +5,36 @@ test.describe('Blog Tag Normalization', () => {
     await page.goto('/blog');
   });
 
-  test('tag section shows normalized tags', async ({ page }) => {
-    // Just check that tag links exist without expecting a specific heading
-    const tagLinks = page.locator('[href^="/blog/tags/"]');
-    const tagCount = await tagLinks.count();
+  test('tag links use normalized slugs', async ({ page }) => {
+    const hrefs = await page
+      .locator('section a[href^="/blog/tags/"]')
+      .evaluateAll(links =>
+        links
+          .map(link => link.getAttribute('href'))
+          .filter((href): href is string => Boolean(href)),
+      );
 
-    expect(tagCount).toBeGreaterThan(0);
-    
-    // Verify that capitalized tags exist (which shows normalization is working)
-    // Use first() to avoid strict mode violations since there are multiple instances
-    await expect(page.getByRole('link', { name: '#Playwright', exact: true }).first()).toBeVisible();
-    await expect(page.getByRole('link', { name: '#Nuxt', exact: true }).first()).toBeVisible();
-  });
-
-  test('tag pages work with normalized tags', async ({ page }) => {
-    await page.goto('/blog/tags/testing');
-
-    // Check that we navigated to the correct URL instead of checking heading text
-    await expect(page).toHaveURL('/blog/tags/testing');
-
-    await expect(page.getByPlaceholder('Search...')).toBeVisible();
-  });
-
-  test('search works on tag pages and searches all articles', async ({ page, isMobile }) => {
-    if (!isMobile) {
-      await page.goto('/blog/tags/testing');
-
-      // Check that we navigated to the correct URL
-      await expect(page).toHaveURL('/blog/tags/testing');
-
-      const searchInput = page.getByPlaceholder('Search...');
-      await searchInput.fill('nuxt');
-
-      await page.waitForTimeout(500);
-
-      const articles = page.getByRole('article');
-      const articleCount = await articles.count();
-
-      if (articleCount > 0) {
-        await expect.poll(() =>
-          page.getByRole('article').filter({ hasText: 'nuxt' }).count()
-        ).toBeGreaterThan(0);
-      }
+    expect(hrefs.length).toBeGreaterThan(0);
+    for (const href of hrefs) {
+      const slug = href.replace('/blog/tags/', '');
+      expect(slug).toBe(slug.toLowerCase());
+      expect(slug).not.toContain(' ');
     }
+  });
+
+  test('hyphenated tag pages are reachable', async ({ page }) => {
+    await page.goto('/blog/tags/mac-mini');
+    await expect(page).toHaveURL('/blog/tags/mac-mini');
+    await expect(page.getByRole('heading', { level: 1, name: /Blog Posts/i })).toBeVisible();
+    expect(await page.getByRole('article').count()).toBeGreaterThan(0);
+  });
+
+  test('search on a tag page can return results outside default tag set', async ({ page }) => {
+    await page.goto('/blog/tags/mac-mini');
+    await page.getByPlaceholder('Search...').fill('saas');
+
+    await expect(page).toHaveURL('/blog/tags/mac-mini');
+    await expect(page.getByPlaceholder('Search...')).toHaveValue('saas');
+    await expect(page.getByRole('article').first()).toBeVisible();
   });
 });

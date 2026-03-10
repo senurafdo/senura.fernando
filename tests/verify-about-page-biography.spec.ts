@@ -5,14 +5,12 @@ import { test, expect } from '@playwright/test';
 
 test.describe('About Page Content', () => {
   test('Verify About Page Biography', async ({ page }) => {
-    // 1. Navigate to `/about`
     await page.goto('/about');
 
-    // 2. Locate the main heading
-    await expect(page.getByRole('heading', { name: 'I\'m Debbie O\'Brien' })).toBeVisible();
+    await expect(page.getByRole('heading', { level: 1, name: /Senura Fernando/ })).toBeVisible();
 
-    // 3. Read the biography sections
-    await expect(page.getByText('With over 15 years experience in Frontend development')).toBeVisible();
-    await expect(page.getByRole('link', { name: 'YouTube Channel' })).toBeVisible();
+    await expect(page.getByText('With over a decade of experience in software quality engineering')).toBeVisible();
+    await expect(page.getByText('Senior QA Engineer and QA Lead')).toBeVisible();
+    await expect(page.getByText('hands-on experience using tools like Playwright')).toBeVisible();
   });
 });

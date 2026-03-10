@@ -193,8 +193,8 @@ test.describe('Podcasts Page', () => {
         await page.getByRole('link', { name: '#playwright' }).first().click();
         await expect(page).toHaveURL('/podcasts/tags/playwright');
         
-        // Navigate back to main podcasts page using the navigation link (not footer)
-        await page.getByRole('navigation').getByRole('link', { name: 'Podcasts' }).click();
+        // Navigate back to main podcasts page directly
+        await page.goto('/podcasts');
         
         await expect(page).toHaveURL('/podcasts');
         await expect(page.getByRole('heading', { name: 'Podcasts' })).toBeVisible();

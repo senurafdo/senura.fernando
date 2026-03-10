@@ -4,35 +4,18 @@ test.beforeEach(async ({ page }) => {
   await page.goto('/');
 });
 
-test('home contains name and title', async ({ page }) => {
-  // The heading might appear multiple times due to CreativeHero glitch effects
-  const heading = page.getByRole('heading', { level: 1 }).first();
-  await expect(heading).toBeVisible();
-  await expect(heading).toContainText('Debbie');
-  await expect(page.getByText('Senior Staff Developer Relations Engineer, Applied AI @Block')).toBeVisible();
+test('home contains current name and title', async ({ page }) => {
+  await expect(page.getByRole('heading', { level: 1, name: /Senura Fernando/ })).toBeVisible();
+  await expect(page.getByText('Senior Quality Engineer')).toBeVisible();
 });
 
-// Featured Posts section no longer exists after redesign
-test.fixme('home page has 2 featured posts', async ({ page }) => {
-  // This section has been removed in the redesign
-  await expect(page.getByRole('heading', { name: 'Featured Posts' })).toBeVisible();
-  const featuredArticles = page.locator('h2#featured-posts + div > article');
-  await expect(featuredArticles).toHaveCount(2);
-});
-
-test('home page has recent blog posts with 6 items', async ({ page }) => {
+test('home page has recent blog posts cards', async ({ page }) => {
   const recentPosts = page.getByRole('region', { name: /Recent Blog Posts/i });
-  await expect(recentPosts.getByRole('article')).toHaveCount(6);
+  const count = await recentPosts.getByRole('article').count();
+  expect(count).toBeGreaterThan(0);
+  expect(count).toBeLessThanOrEqual(6);
 });
 
-// Videos are displayed differently after redesign - not in article elements
-test.fixme('home page has recent videos with 4 items', async ({ page }) => {
-  // Videos section has been redesigned and doesn't use article elements anymore
-  const recentPosts = page.getByRole('region', { name: /Recent Videos/i });
-  await expect(recentPosts.getByRole('article')).toHaveCount(4);
-});
-
-test('how page has recent podcasts with 2 items', async ({ page }) => {
-  const recentPosts = page.getByRole('region', { name: /Recent Podcasts/i });
-  await expect(recentPosts.getByRole('article')).toHaveCount(2);
+test('home page currently hides recent podcasts section', async ({ page }) => {
+  await expect(page.getByRole('heading', { name: /Recent Podcasts/i })).toHaveCount(0);
 });

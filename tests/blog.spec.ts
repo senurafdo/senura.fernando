@@ -1,27 +1,20 @@
 import { expect, test } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
-  await page.goto('/blog/testing-color-mode');
+  await page.goto('/blog/understanding-saas-testing-operations-in-a-bau-environment');
 });
 
-test('blog has a heading, date, content and prev and next links', async ({ page }) => {
-  await expect(page
-    .getByRole('heading', { name: 'Testing a Sites Color Mode with Playwright' }))
-    .toBeVisible();
+test('blog post page has title, date, content, and prev/next navigation', async ({ page }) => {
+  await expect(page.getByRole('heading', { level: 1, name: 'Understanding SaaS Testing Operations in a BAU Environment' })).toBeVisible();
+  await expect(page.locator('header time')).toBeVisible();
+  await expect(page.getByText('As organizations accelerate their adoption of SaaS')).toBeVisible();
 
-  await expect(page.getByText('September 3, 2022')).toBeVisible();
+  const nav = page.getByRole('navigation', { name: 'Blog post navigation' });
+  await expect(nav).toBeVisible();
+  await expect(nav.getByRole('link', { name: /Previous post:/ })).toBeVisible();
+  await expect(nav.getByRole('link', { name: /Next post:/ })).toBeVisible();
 
-  await expect(page.getByRole('img', { name: 'Testing a Sites Color Mode with Playwright' })).toBeVisible();
-
-  await expect(page
-    .getByText('My website uses the Nuxt color mode module to allow the user to change the theme'))
-    .toBeVisible();
-
-  await page.getByRole('link', { name: 'Challenging Yourself' }).click();
-
-  await expect(page.getByRole('heading', { name: 'Challenging Yourself' })).toBeVisible();
-
-  await page.getByRole('link', { name: 'Testing a Sites Color Mode with Playwright' }).click();
-
-  await expect(page.getByRole('heading', { name: 'Testing a Sites Color Mode with Playwright' })).toBeVisible();
+  await nav.getByRole('link', { name: /Previous post:/ }).click();
+  await expect(page).toHaveURL('/blog/mac-mini-m4-pro-for-qa-automation-practical-evaluation');
+  await expect(page.getByRole('heading', { level: 1, name: /Mac Mini M4 Pro for QA Automation/ })).toBeVisible();
 });

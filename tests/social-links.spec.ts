@@ -13,7 +13,7 @@ test.describe('Social Links', () => {
       page.waitForEvent('popup'),
       page.getByRole('banner').getByRole('link', { name: 'x' }).click()
     ]);
-    await expect(page1).toHaveURL('https://x.com/debs_obrien');
+    await expect(page1).toHaveURL('https://x.com/senura_');
   });
 
   test('youtube link in header works', async ({ page }) => {
@@ -23,9 +23,8 @@ test.describe('Social Links', () => {
 
     const [page1] = await Promise.all([
       page.waitForEvent('popup'),
-      page.getByRole('banner').getByRole('link', { name: 'youTube' }).click()
+      page.getByRole('banner').getByRole('link', { name: 'youtube' }).click()
     ]);
-    await expect(page1).toHaveURL('https://www.youtube.com/c/DebbieOBrien');
+    await expect(page1).toHaveURL('https://www.youtube.com/@TestingMonkey');
   });
 });
-

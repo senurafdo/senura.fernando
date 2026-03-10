@@ -16,43 +16,14 @@ test.describe('404 Error Page', () => {
   });
 
   test('404 page maintains header and footer navigation', async ({ page }) => {
-    await expect(page.getByRole('banner').getByRole('navigation')).toMatchAriaSnapshot(`
-      - navigation:
-        - list:
-          - listitem:
-            - link "About":
-              - /url: /about
-          - listitem:
-            - link "Videos":
-              - /url: /videos
-          - listitem:
-            - link "Podcasts":
-              - /url: /podcasts
-          - listitem:
-            - link "Courses":
-              - /url: /courses
-          - listitem:
-            - link "Blog":
-              - /url: /blog
-    `);
-    
-    await expect(page.getByRole('contentinfo').getByRole('list').first()).toMatchAriaSnapshot(`
-      - list:
-        - listitem:
-          - link "About":
-            - /url: /about
-        - listitem:
-          - link "Videos":
-            - /url: /videos
-        - listitem:
-          - link "Podcasts":
-            - /url: /podcasts
-        - listitem:
-          - link "Courses":
-            - /url: /courses
-        - listitem:
-          - link "Blog":
-            - /url: /blog
-    `);
+    const headerNav = page.getByRole('banner').getByRole('navigation');
+    await expect(headerNav.getByRole('link', { name: 'About' })).toHaveAttribute('href', '/about');
+    await expect(headerNav.getByRole('link', { name: 'Blog' })).toHaveAttribute('href', '/blog');
+    await expect(headerNav.getByRole('link')).toHaveCount(2);
+
+    const footerNav = page.getByRole('contentinfo').getByRole('list').first();
+    await expect(footerNav.getByRole('link', { name: 'About' })).toHaveAttribute('href', '/about');
+    await expect(footerNav.getByRole('link', { name: 'Blog' })).toHaveAttribute('href', '/blog');
+    await expect(footerNav.getByRole('link')).toHaveCount(2);
   });
 });

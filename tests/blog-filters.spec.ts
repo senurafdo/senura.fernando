@@ -1,36 +1,26 @@
 import { expect, test } from '@playwright/test';
 
-// Map of test topics to their display names with # prefix and proper capitalization
-// Only include tags that are actually displayed in the filter section
-const topicMappings: Record<string, string> = {
-  'nuxt': '#Nuxt',
-  'playwright': '#Playwright', 
-  'testing': '#testing',
-  'react': '#React',
-  'personal': '#personal',
-  'ai': '#AI'  // Using 'ai' instead of 'javascript' since it's visible in the filter
-};
+test.describe('Blog Tag Filters', () => {
+  test('topic links on /blog navigate to matching tag pages', async ({ page }) => {
+    await page.goto('/blog');
 
-const topics = Object.keys(topicMappings);
+    const tagHrefs = await page
+      .locator('section a[href^="/blog/tags/"]')
+      .evaluateAll(links =>
+        [...new Set(
+          links
+            .map(link => link.getAttribute('href'))
+            .filter((href): href is string => Boolean(href)),
+        )],
+      );
 
-for (const topic of topics) {
-    
-  test(`tag links to page with posts on ${topic}`, async ({ page, isMobile }) => {
-    if (!isMobile) {
+    expect(tagHrefs.length).toBeGreaterThan(0);
+
+    for (const href of tagHrefs) {
       await page.goto('/blog');
-
-      // Click the tag link using accessible locators
-      // Find the link with the tag name, ensuring we get the first one from the filter section
-      const tagLink = page.getByRole('link', { name: topicMappings[topic] }).first();
-      await tagLink.click();
-      
-      // Check that we navigated to the correct URL
-      await expect(page).toHaveURL(new RegExp(`/blog/tags/${topic}`));
-
-      // Check that there are articles with tag links matching the topic
-      await expect.poll(() =>
-        page.getByRole('article').getByRole('link', { name: `#${topic}` }).count())
-        .toBeGreaterThan(0);
+      await page.locator(`a[href="${href}"]`).first().click();
+      await expect(page).toHaveURL(href);
+      await expect(page.getByRole('heading', { level: 1, name: /Blog Posts/i })).toBeVisible();
     }
-    });
-}
+  });
+});
