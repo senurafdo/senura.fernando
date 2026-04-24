@@ -1,20 +1,10 @@
 <script setup lang="ts">
 import IconLinkedIn from '~/components/icon/IconLinkedIn.vue'
-import IconX from '~/components/icon/IconX.vue'
 import IconYouTube from '~/components/icon/IconYouTube.vue'
 </script>
 
 <template>
   <ul class="flex gap-6 lg:gap-3 justify-center text-[#EBF4F6] mr-2 items-center">
-    <li>
-      <a
-        href="https://x.com/senura_"
-        target="_blank"
-        rel="noopener"
-        aria-label="x"
-        class="text-[#EBF4F6] hover:text-[#7AB2B2] transition duration-300"
-      ><IconX class="w-7 h-7 lg:h-4 lg:w-4" /></a>
-    </li>
     <li>
       <a
         href="https://www.linkedin.com/in/senura-fernando/"

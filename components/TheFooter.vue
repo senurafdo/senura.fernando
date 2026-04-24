@@ -15,22 +15,6 @@
     <ul class="mt-8 flex flex-wrap justify-center space-x-6 mb-6 px-6">
       <li>
         <a
-          href="https://x.com/senura_"
-          target="_blank"
-          rel="noopener"
-          aria-label="x"
-          class="
-            text-[#EBF4F6]
-            transition
-            hover:text-[#7AB2B2]
-          "
-        >
-          <IconX class="h-10 w-10 mb-6" />
-        </a>
-      </li>
-
-      <li>
-        <a
           href="https://www.linkedin.com/in/senura-fernando"
           target="_blank"
           rel="nofollow noopener noreferrer"

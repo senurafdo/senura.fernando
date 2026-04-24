@@ -16,7 +16,6 @@ test.describe('Navigation Functionality', { tag: '@agent' }, () => {
     await expect(footerNav.getByRole('link')).toHaveCount(2);
 
     const socialLinks = footer.getByRole('list').nth(1);
-    await expect(socialLinks.getByRole('link', { name: 'x' })).toHaveAttribute('href', 'https://x.com/senura_');
     await expect(socialLinks.getByRole('link', { name: 'LinkedIn' })).toHaveAttribute('href', 'https://www.linkedin.com/in/senura-fernando');
     await expect(socialLinks.getByRole('link', { name: 'YouTube' })).toHaveAttribute('href', 'https://www.youtube.com/@TestingMonkey');
     await expect(socialLinks.getByRole('link', { name: 'GitHub' })).toHaveAttribute('href', 'https://github.com/senurafdo');
