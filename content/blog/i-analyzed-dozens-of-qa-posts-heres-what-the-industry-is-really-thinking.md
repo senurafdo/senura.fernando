@@ -86,14 +86,7 @@ published: true
         <p class="p1">A clear tension runs through the posts. One camp says QA must become deeply technical: Playwright, TypeScript, CI/CD, APIs, security, performance, and architecture. Another warns that interview loops and hiring filters are drifting too far into pure developer evaluation and undervaluing test thinking, risk analysis, and user perspective.</p>
       </td>
     </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p1">The QA community in this snapshot is not dying, not thriving.<span class="Apple-converted-space">  </span>It is mid-reinvention, out loud, and slightly afraid. AI is simultaneously a threat and an opportunity. What the dataset tells us most clearly is that the profession is not waiting to be told what it will be. It is arguing, rebranding, and retooling in real time, which is, paradoxically, the healthiest signal in the feed.</p>
-      </td>
-      <td valign="middle" class="td1">
-        <p class="p1">This snapshot shows a profession in active transition rather than decline. QA professionals still see themselves as essential, but fewer believe that traditional late-stage testing alone is enough. he net picture is a community that is alert, ambitious, and trying to redefine its value around engineering depth, risk judgment, and business impact before the market defines it for them.</p>
-      </td>
-    </tr>
+    
   </tbody>
 </table>
 <p class="p2"><br></p>
